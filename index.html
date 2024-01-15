@@ -153,7 +153,7 @@ a,a,a,a,a,a,0,0,0,0,0,a,a,b,b,b
 0,0,0,0,0,0,0,0,0,0,0,a,a,b,b,b
 NAME tentacle shoulder
 EXT 0,4 3 15,4 FX slide_l
-EXT 8,0 5 8,15 FX slide_u
+EXT 8,0 5 8,15 FX slide_u DLG c
 EXT 0,5 3 15,5 FX slide_l
 PAL 3
 TUNE 3
@@ -634,7 +634,7 @@ I'm a cat
 NAME cat dialog
 
 DLG 1
-This cup is overflowing with the liquid essence...
+This cup is overflowing with the liquid essence...{item "0" 1}{property locked false}
 NAME tea dialog
 
 DLG 2
@@ -644,21 +644,21 @@ NAME key dialog
 DLG 3
 """
 Millennia ago, a new proboscis tore open our atmosphere.
-It was a day of promise.
+It was a day of promise.{gospel = 1}
 """
 NAME sign dialog
 
 DLG 4
 """
 However, the promise was entombed to a black fate. 
-The confines of the space wielder became a sarcophagus.
+The confines of the space wielder became a sarcophagus.{gospel = 2}
 """
 NAME sign 2 dialog
 
 DLG 5
 """
 It took one to summon our sanctimony...
-And it took the same one to seal it away...
+And it took the same one to seal it away...{gospel = 3}
 """
 NAME sign 3 dialog
 
@@ -671,7 +671,7 @@ The liquid's texture resembles... blood...?
 NAME essence 6 dialog
 
 DLG 8
-Now, it takes a new one to uncover it all over.
+Now, it takes a new one to uncover it all over.{gospel = 4}
 NAME sign 4 dialog
 
 DLG 9
@@ -679,7 +679,7 @@ The liquid's texture resembles... blood...?
 NAME essence 4 dialog
 
 DLG a
-Consume the offering and amass the power to police its justice.
+Consume the offering and amass the power to police its justice.{gospel = 5}
 NAME sign 5 dialog
 
 DLG b
@@ -696,8 +696,19 @@ The Kraken's Envoy: FIN
 """
 NAME ending 1
 
-VAR a
-42
+DLG c
+"""
+{
+  - {item "0"} == 0 ?
+    {property locked true}The envoy lacks something of significance...
+  - else ?
+    {property locked false}The time is near...{wvy}{/wvy}
+}
+"""
+NAME locked exit 1
+
+VAR gospel
+1
 
 TUNE 1
 3d,0,0,0,3d5,0,0,0,3l,0,0,0,3s,0,0,0
@@ -12525,7 +12536,6 @@ CHAR 9835
 011011
 011000
 000000
-</script>
 </script>
 
 </head>
