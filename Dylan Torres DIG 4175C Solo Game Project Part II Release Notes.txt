@@ -1,0 +1,28 @@
+﻿The Kraken’s Envoy
+Release Notes
+﻿
+Game: The Kraken’s Envoy 
+Creator: Dylan Torres
+Version: 2.0
+Date: 1/21/24
+
+
+New Features
+* New rooms to explore in the Kraken Chamber (the area from the first version).
+* New sprites, areas, screen transitions, story elements and text colorations.
+* Powers are gained from drinking the Kraken’s essence, and these powers tie into the new areas.
+* Three different endings ﻿depending on how interactions are handled.
+﻿
+Fixes
+* The Kraken Chamber has been given new areas locked behind certain checks to add intrigue.
+* Gospels must be read in order to learn them all.
+﻿
+Improvements (of existing features)
+* Learning all five gospels is required for one of the three endings.
+* Gateways between rooms are now clearer. 
+
+
+
+
+Known Bugs
+* Sometimes, text bubbles do not appear properly when color changes are called in the editor.
